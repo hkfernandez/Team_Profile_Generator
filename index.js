@@ -11,8 +11,8 @@ let employeeTypeGV = ''
 function buildManagerObj () {
       inquirer.prompt (questions.manager)
             .then (({name, id, email, officeNumber, addTeamMemberChoice})=>{
-                  let employee = new Manager (name, id, email, officeNumber);
-                  employeesArrGV.push(employee);
+                  let manager = new Manager (name, id, email, officeNumber);
+                  employeesArrGV.push(manager);
                   if(addTeamMemberChoice === "Yes") {
                         askEmployeeType();
                   }
@@ -34,8 +34,8 @@ function askEmployeeType () {
 function buildEngineerObj () {
       inquirer.prompt (questions.engineer)
             .then (({name, id, email, github, addTeamMemberChoice})=>{
-                  let employee = new Engineer (name, id, email, github);
-                  employeesArrGV.push(employee);
+                  let engineer = new Engineer (name, id, email, github);
+                  employeesArrGV.push(engineer);
                   if(addTeamMemberChoice === "Yes") {
                         askEmployeeType();
                   }
@@ -45,8 +45,8 @@ function buildEngineerObj () {
 function buildInternObj () {
       inquirer.prompt (questions.intern)
             .then (({name, id, email, school, addTeamMemberChoice})=>{
-                  let employee = new Intern (name, id, email, school);
-                  employeesArrGV.push(employee);
+                  let intern = new Intern (name, id, email, school);
+                  employeesArrGV.push(intern);
                   if(addTeamMemberChoice === "Yes") {
                         askEmployeeType();
                   }
