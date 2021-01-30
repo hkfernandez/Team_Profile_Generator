@@ -1,6 +1,6 @@
 // MODULES
 // dependencies
-const inguirer = require ('inquirer');
+const inquirer = require ('inquirer');
 // custom 
 const html = require ('./Develop/src/page-template.js');
 const questions = require ('./lib/Questions.js');
@@ -67,7 +67,8 @@ function buildInternObj () {
 
 
 function writeHtml () {
-
+      let htmlDoc = html(employeesArrGV);
+      console.log(htmlDoc);
 }
 
 function init () {
