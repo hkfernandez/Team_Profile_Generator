@@ -1,5 +1,7 @@
 // MODULES
-// dependencies
+// builtin
+const fs = require ('fs');
+// 3rd party
 const inquirer = require ('inquirer');
 // custom 
 const html = require ('./Develop/src/page-template.js');
@@ -68,7 +70,7 @@ function buildInternObj () {
 
 function writeHtml () {
       let htmlDoc = html(employeesArrGV);
-      console.log(htmlDoc);
+      fs.writeFile ('./Dist/team.html', htmlDoc, () => {console.log('HTML File Written')});
 }
 
 function init () {
