@@ -13,9 +13,7 @@ function buildManagerObj () {
             .then (({name, id, email, officeNumber, addTeamMemberChoice})=>{
                   let manager = new Manager (name, id, email, officeNumber);
                   employeesArrGV.push(manager);
-                  if(addTeamMemberChoice === "Yes") {
-                        askEmployeeType();
-                  }
+                  addNewEmployee();
             })
 }
 
@@ -36,9 +34,7 @@ function buildEngineerObj () {
             .then (({name, id, email, github, addTeamMemberChoice})=>{
                   let engineer = new Engineer (name, id, email, github);
                   employeesArrGV.push(engineer);
-                  if(addTeamMemberChoice === "Yes") {
-                        askEmployeeType();
-                  }
+                  addNewEmployee();
             })
 }
 
@@ -47,10 +43,29 @@ function buildInternObj () {
             .then (({name, id, email, school, addTeamMemberChoice})=>{
                   let intern = new Intern (name, id, email, school);
                   employeesArrGV.push(intern);
-                  if(addTeamMemberChoice === "Yes") {
-                        askEmployeeType();
-                  }
+                  addNewEmployee();
             })
 }
 
-buildManagerObj ();
+function addNewEmployee () {
+      inquirer.prompt (questions.addEmployee)
+      .then (({addEmployeeChoice})=>{
+            const addEmployee = addEmployeeChoice;
+            if(addEmployee === "Yes") {
+                  askEmployeeType()
+            }else {
+                  writeHtml();
+            }
+      })
+}
+
+function writeHtml () {
+
+}
+
+function init () {
+      buildManagerObj ()
+}
+
+ init ();
+
