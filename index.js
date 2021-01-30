@@ -67,7 +67,7 @@ function buildInternObj () {
             })
 }
 
-
+// calledd by addNewEmployee
 function writeHtml () {
       let htmlDoc = html(employeesArrGV);
       fs.writeFile ('./Dist/team.html', htmlDoc, () => {console.log('HTML File Written')});
