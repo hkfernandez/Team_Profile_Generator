@@ -7,6 +7,8 @@ All employee objects are created with classes fo the code is easily modifiable t
 
 This project was an opportunity to familiarize myself with classes and requiring various modules in node js. 
 
+Please feel free to check out the [repository here](https://github.com/hkfernandez/Team_Profile_Generator).
+
 ## Installation
 Once you have forked the repository just open the root folder in your terminal and enter `node index.js`
 
@@ -23,8 +25,6 @@ All testing is run with [Jest](https://jestjs.io/)
 There are tests in the `./tests` folder that can be run if you have the [Jest](https://jestjs.io/) package installed. If you set the scripts key for `test` in the package.json file to "jest" you can run them by typing `npm test`. 
 
 The tests here were created to establish correct implemention of the classes and constructor functions. 
-
-
 
 ## License
 
