@@ -18,6 +18,13 @@ All code is written in Javascript
 The command line prompted is facilitated by the [Inquirer node Module](https://www.npmjs.com/package/inquirer#examples)
 All testing is run with [Jest](https://jestjs.io/)
 
+## Tests
+
+There are tests in the `./tests` folder that can be run if you have the [Jest](https://jestjs.io/) package installed. If you set the scripts key for `test` in the package.json file to "jest" you can run them by typing `npm test`. 
+
+The tests here were created to establish correct implemention of the classes and constructor functions. 
+
+
 
 ## License
 
